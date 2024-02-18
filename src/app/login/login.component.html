@@ -1,0 +1,39 @@
+<!-- <div class="container text-center w-100 h-100 bg-secondary d-flex border p-3">
+    <div class="main-container h-100 w-100  d-flex border border-primary rounded-5 p-3 row row-cols-2" style="border-radius: 10%; background-color:rgb(191, 228, 228) ;">
+        <div class="col wrap d-flex w-50">
+            <img src= "/assets/img/resim.jpg" class="img-responsive img-fluid rounded-5 ">
+        </div>
+        <div class="col wrap w-50 text-center justify-content-center" style="padding-top: 9rem">
+            <h1 class="text-center">Hello Again!</h1>
+            <h3>Welcome back you'we been missed!</h3>
+            <input type="email" name="email" class="form-control m-3 w-75 m-auto mb-3" placeholder="Enter Username">
+            <input type="password" name="password" class="form-control m-3 w-75 m-auto" placeholder="Password">
+            <h3 class="d-flex justify-content-end w-75 mt-3 text-black">Recovery Password</h3>
+
+            <button type="button" class="btn btn-danger w-75">Sign in</button>
+            <button type="button" class="btn btn-danger w-75 mt-3" (click)="registerHandled()">register</button>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="left-side">
+    </div>
+    <div class="right-side">
+        <h1>Hello!</h1>
+        <p>Welcome back you've been missed!</p>
+        <form [formGroup]="loginForm" class="field-form">
+            <mat-form-field >
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email" placeholder="Email">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password" placeholder="Password">
+            </mat-form-field>
+            <button mat-raised-button color="primary" [disabled]="isDisableForFormGroup()" style="color:yellow;" (click)="login()">Sign In</button>
+            <p class="register-text" (click)="goToRegister()">Register</p>
+        </form>
+    </div>
+</div>
